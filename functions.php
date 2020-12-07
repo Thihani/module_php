@@ -24,4 +24,5 @@ function displayItem($nom, $prix, $photo){
     echo $nom. "<br>" .$prix ."<br>" .$photo . "<br>";
 }
 
+
 ?>
