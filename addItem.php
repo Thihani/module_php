@@ -13,9 +13,9 @@
 echo $_GET['error'];
 ?>
 <form action="displayItem.php" method="POST">
-    Name of product: <input type="text" name="name" value = "<?=htmlentities($_POST['Name'])?>" >    
+    Name of product: <input type="text" name="name">    
     <br><br>    
-    Price: <input type="number" name="price" value = "<?=htmlentities($_POST['Price'])?>">     
+    Price: <input type="number" name="price">     
     <br><br>
     <input type="submit" name="Submit" value="Submit">
 </form> 
