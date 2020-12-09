@@ -9,7 +9,7 @@
 <h1>Your shopping basket</h1>
 <pre>
 <?php
-//var_dump($_POST);
+var_dump($_POST);
 ?>
 </pre>
 <?php
@@ -17,10 +17,16 @@ include"functions.php";
 global $items;
 $chosedItem=$_POST['selection'];
 
-foreach ($chosedItem as $index) {
+foreach ($chosedItem as $index => $quantity) {
     $item = $items[$index];
-   echo $item['name'] . ' - Price: $'. $item['price'] . $item['photo'] .  '<br>';
-}   
+    echo $item['name']  . '<br>' .'Quantity: '. $quantity . '<br>'. 'Unit Price: $'. $item['price']. '<br>';   
+    $sub_total = $quantity*$item['price'];
+    echo 'Sub-total: $'. $sub_total. '<br>'.'<br>' ;
+    $total = $total+$sub_total;
+
+};
+echo 'Total amount: $'. $total; 
+
 
 ?>
 </body>

@@ -16,7 +16,8 @@ global $items;
             <?php echo $item["name"]; ?> <br>
             <?php echo "Price: $" .$item["price"]; ?> <br>
             <?php echo $item["photo"]; ?> <br>
-            <input type="checkbox" name="selection[]" value="<?php echo $key; ?>">
+            Quantity: 
+            <input type="number" name="selection[<?php echo $key; ?>]" value=" ">
 
             <hr>
         <?php } ?>
